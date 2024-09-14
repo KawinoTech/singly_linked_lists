@@ -84,6 +84,7 @@ int main(void)
 				break;
 			case 6:
 				{
+					free_list(head);
 					exit(EXIT_SUCCESS);
 				}
 		}

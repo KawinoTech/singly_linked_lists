@@ -15,3 +15,4 @@ int list_push(char *name, int age, char *gender, Student **head);
 int list_pop(char *name, int age, char *gender, Student **head);
 int insert_n(char *name, int age, char *gender, Student **head, int pos);
 size_t print_list(Student *h);
+void free_list(Student *head);
