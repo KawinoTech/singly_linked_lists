@@ -68,7 +68,7 @@ int main(void)
 				}
 				else
 				{
-					printf("<-----Error------>\n List does not exist\nPlease press 1 to create\n<-------->\n");
+					printf("<-----Error------>\n List does not exist\nPlease press 1 to create\n<------>\n");
 				}
 				break;
 			case 5:
