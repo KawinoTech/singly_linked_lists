@@ -12,9 +12,8 @@
 
 int new_list(char *name, int age, char *gender, Student **head)
 {
-	Student *new_node;
+	Student *new_node = (Student *) malloc(sizeof(Student));
 
-	new_node = (Student *) malloc(sizeof(Student));
 	if (new_node == NULL)
 	{
 		printf("Error\n");
@@ -27,7 +26,7 @@ int new_list(char *name, int age, char *gender, Student **head)
 	(*head) = new_node;
 	printf("=======Success======\n");
 	printf("Details------>\nName: %s\nAge: %d\nGender: %s\n",
-	(*head)->name, age, gender);
+	name, age, gender);
 	sleep(2);
 	return (0);
 
