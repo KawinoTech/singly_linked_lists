@@ -10,12 +10,12 @@
  * Return: 0 (Success)
  * or 1 (Error)
  */
-int insert_n(char *name, int age, char *gender, Student **head, int pos)
+int insert_n(char *name, int age, char *gender, Student **head, long unsigned int pos)
 {
-	Student **temp;
-	Student **prev_node;
+	Student *temp;
+	Student *prev_node;
 	Student *new_node;
-	int position;
+	long unsigned int position;
 
 	new_node = (Student *) malloc(sizeof(Student));
 	if (new_node == NULL)
@@ -24,16 +24,16 @@ int insert_n(char *name, int age, char *gender, Student **head, int pos)
 		return (1);
 	}
 	position = 1;
-	temp = prev_node = head;
+	*temp = *prev_node = *head;
 	while (position < pos)
 	{
-		(*temp) = (*temp)->next;
+		temp = temp->next;
 	}
 	new_node->name = strdup(name);
 	new_node->age = age;
 	new_node->gender = strdup(gender);
-	new_node->next = (*temp)->next;
-	(*temp)->next = new_node;
+	new_node->next = temp->next;
+	temp->next = new_node;
 	printf("=======Success======\n");
 	printf("Details------>\nName: %s\nAge: %d\nGender: %s\n",
 	name, age, gender);

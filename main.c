@@ -8,7 +8,8 @@ int main(void)
 	size_t list_size;
 	char name[20], gender[10];
 	char *input_script;
-	int age, operation, position;
+	int age, operation;
+	long unsigned int position;
 	Student *head;
 
 	iterate = true;
@@ -50,14 +51,14 @@ int main(void)
 			case 3:
 				printf("Enter Position: ");
 				scanf("%d", &position);
-				if (head != NULL)
+				if (head != NULL && position <= print_list(head))
 				{
 					prompt(name, &age, gender);
 					insert_n(name, age, gender, &head, position);
 				}
 				else
 				{
-					printf("<-----Error------>\n List does not exist\nPlease press 1 to create\n<-------->\n");
+					printf("<-----Error------>\n");
 				}
 				break;
 			case 4:
