@@ -9,7 +9,7 @@ int main(void)
 	char name[20], gender[10];
 	char *input_script;
 	int age, operation;
-	long unsigned int position;
+	unsigned long int position;
 	Student *head;
 
 	iterate = true;
@@ -34,7 +34,7 @@ int main(void)
 				}
 				else
 				{
-					printf("<-----Error------>\n List already exist\n<------------->\n");
+					printf("<---Error--->\n List already exist\n<------>\n");
 				}
 				break;
 			case 2:
@@ -45,12 +45,13 @@ int main(void)
 				}
 				else
 				{
-					printf("<-----Error------>\n List does not exist\nPlease press 1 to create\n<-------->\n");
+					printf
+					("<-Error->\n List does not exist\nPlease press 1 to create\n<--->\n");
 				}
 				break;
 			case 3:
 				printf("Enter Position: ");
-				scanf("%d", &position);
+				scanf("%ld", &position);
 				if (head != NULL && position <= print_list(head))
 				{
 					prompt(name, &age, gender);
@@ -69,7 +70,8 @@ int main(void)
 				}
 				else
 				{
-					printf("<-----Error------>\n List does not exist\nPlease press 1 to create\n<------>\n");
+					printf
+					("<-Error->\n List does not exist\nPlease press 1 to create\n<--->\n");
 				}
 				break;
 			case 5:
