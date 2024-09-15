@@ -16,3 +16,4 @@ int list_pop(char *name, int age, char *gender, Student **head);
 int insert_n(char *name, int age, char *gender, Student **head, long unsigned int pos);
 size_t print_list(Student *h);
 void free_list(Student *head);
+void engine(void);
