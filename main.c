@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdbool.h>
 /**
  * main - Entry point of program
  *
@@ -8,20 +9,41 @@
 
 int main(void)
 {
-	unsigned int choice;
-
-	printf("<---Welcome to DSA operations--->\n");
-	printf("PLease choose a Data Structure\n");
-	printf("1. Singly Linked Lists\n");
-	printf("2. Doubly Linked Lists\n");
-	scanf("%d", &choice);
-	if (choice == 1)
+	bool iterate;
+	char choice[1];
+	
+	iterate = true;
+	while(iterate)
 	{
-		engine();
-	}
-	else
-	{
-		printf("Sorry, Doubly linked list is not yet released\n");
+		printf("<---Welcome to DSA operations--->\n");
+		printf("PLease choose a Data Structure\n");
+		printf("1. Singly Linked Lists\n");
+		printf("2. Doubly Linked Lists\n");
+		printf("3. Exit Program\n");
+		scanf("%s", choice);
+		printf("%s", choice);
+		if (strlen(choice) > 1)
+		{
+			printf("Error\n");
+			continue;
+		}
+		if (strcmp(choice,"1") == 0)
+		{
+			engine();
+		}
+		else if (strcmp(choice,"2") == 0)
+		{
+			printf("Sorry, Doubly linked list is not yet released\n");
+		}
+		else if (strcmp(choice,"3") == 0)
+		{
+			printf("Exit\nGoodbye\n");
+			exit(EXIT_SUCCESS);
+		}
+		else
+		{
+			printf("Inalid input, please try again\n");
+		}
 	}
 	return (0);
 }
