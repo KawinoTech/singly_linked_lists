@@ -97,7 +97,7 @@ int engine(void)
 				}
 			case 7:
 				{
-					del_begin(head);
+					del_begin(&head);
 				}
 				break;		
 		}

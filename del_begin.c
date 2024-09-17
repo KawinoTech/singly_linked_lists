@@ -7,22 +7,26 @@
  * or 1 (Error)
  */
 
-int del_begin(Student *head)
+int del_begin(Student **head)
 {
-	Student *temp;
-	
-	temp = head;
-	free(head->name);
-	free(head->gender);
-	if (head->next == NULL)
-	{
-		head = NULL;
-	}
-	else
-	{
-		head = head->next;
-	}
-	free(temp);
-	sleep(2);
-	return (0);
+    // Check if the list is empty
+    if (*head == NULL) {
+        printf("Error: List is empty, cannot delete\n");
+        return 1;
+    }
+
+    // Store the current head node
+    Student *temp = *head;
+    
+    // Move the head pointer to the next node
+    *head = (*head)->next;
+
+    // Free the memory occupied by the original head node
+    free(temp->name);  // Free the name string if it was dynamically allocated
+    free(temp->gender);  // Free the gender string if it was dynamically allocated
+    free(temp);  // Free the node itself
+
+    printf("Successfully deleted the first node.\n");
+
+    return 0;
 }

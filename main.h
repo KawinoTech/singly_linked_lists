@@ -18,5 +18,5 @@ int new_list(char *name, int age, char *gender, Student **head);
 int list_push(char *name, int age, char *gender, Student **head);
 int list_pop(char *name, int age, char *gender, Student **head);
 int insert_n(char *name, int age, char *gender, Student **head, long unsigned int pos);
-int del_begin(Student *head);
+int del_begin(Student **head);
 #endif
