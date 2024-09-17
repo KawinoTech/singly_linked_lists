@@ -11,6 +11,7 @@ typedef struct student {
 	int age;
 	struct student *next;
 }Student;
+
 int engine(void);
 size_t print_list(Student *h);
 void free_list(Student *head);
@@ -21,6 +22,7 @@ int list_pop(char *name, int age, char *gender, Student **head);
 int insert_n(char *name, int age, char *gender, Student **head, long unsigned int pos);
 int del_begin(Student *head);
 #endif
+
 int main(void)
 {
 	bool iterate;
@@ -60,6 +62,7 @@ int main(void)
 	}
 	return (0);
 }
+
 int engine(void)
 {
 	bool iterate;
@@ -156,6 +159,7 @@ int engine(void)
 		}
 	}
 }
+
 int insert_n(char *name, int age, char *gender, Student **head,
 unsigned long int pos)
 {
@@ -187,6 +191,7 @@ unsigned long int pos)
 	sleep(2);
 	return (0);
 }
+
 void free_list(Student *head)
 {
 	Student *temp;
@@ -200,6 +205,7 @@ void free_list(Student *head)
 		free(temp);
 	}
 }
+
 int list_push(char *name, int age, char *gender, Student **head)
 {
 	Student *new_node = (Student *) malloc(sizeof(Student));
@@ -215,6 +221,7 @@ int list_push(char *name, int age, char *gender, Student **head)
 	sleep(2);
 	return (0);
 }
+
 int list_pop(char *name, int age, char *gender, Student **head)
 {
 	Student *temp = *head;
@@ -240,6 +247,7 @@ int list_pop(char *name, int age, char *gender, Student **head)
 	sleep(2);
 	return (0);
 }
+
 size_t print_list(Student *h)
 {
 	Student *temp;
@@ -259,6 +267,7 @@ size_t print_list(Student *h)
 	return (i);
 
 }
+
 void prompt(char *name, int *age, char *gender)
 {
 	printf("Enter your name: ");
@@ -268,6 +277,7 @@ void prompt(char *name, int *age, char *gender)
 	printf("Enter your gender: ");
 	scanf("%s", gender);
 }
+
 int del_begin(Student *head)
 {
 	Student *temp;
@@ -287,6 +297,7 @@ int del_begin(Student *head)
 	sleep(2);
 	return (0);
 }
+
 int new_list(char *name, int age, char *gender, Student **head)
 {
 	Student *new_node = (Student *) malloc(sizeof(Student));
