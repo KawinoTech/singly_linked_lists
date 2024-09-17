@@ -3,10 +3,11 @@
 /**
  * engine - deals with routing of operations
  *
- * Return: void
+ * Return: (0) Success
+ * (1) if error
  */
 
-void engine(void)
+int engine(void)
 {
 	bool iterate;
 	size_t list_size;
@@ -92,8 +93,13 @@ void engine(void)
 				{
 					free_list(head);
 					printf("Exit\nGoodbye\n");
-					exit(EXIT_SUCCESS);
+					return (0);
 				}
+			case 7:
+				{
+					del_begin(head);
+				}
+				break;		
 		}
 	}
 }

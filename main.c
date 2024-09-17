@@ -13,15 +13,14 @@ int main(void)
 	char choice[1];
 	
 	iterate = true;
+	printf("<---Welcome to DSA operations--->\n");
 	while(iterate)
 	{
-		printf("<---Welcome to DSA operations--->\n");
 		printf("PLease choose a Data Structure\n");
 		printf("1. Singly Linked Lists\n");
 		printf("2. Doubly Linked Lists\n");
 		printf("3. Exit Program\n");
 		scanf("%s", choice);
-		printf("%s", choice);
 		if (strlen(choice) > 1)
 		{
 			printf("Error\n");
