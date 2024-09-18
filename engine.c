@@ -20,7 +20,8 @@ int engine(void)
 	"\n3. Insert new node at position n"
 	"\n4. Insert new node at the end"
 	"\n5. Check all list items"
-	"\n6. Quit program\n\n";
+	"\n6. Delete node at the beginning"
+	"\n7. Quit program\n\n";
 
 	iterate = true;
 	head = NULL;
@@ -89,13 +90,13 @@ int engine(void)
 					printf("\nEmpty List, Press 1 to create\n");
 				}
 				break;
-			case 6:
+			case 7:
 				{
 					free_list(head);
 					printf("Exit\nGoodbye\n");
 					return (0);
 				}
-			case 7:
+			case 6:
 				{
 					del_begin(&head);
 				}
