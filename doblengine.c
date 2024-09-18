@@ -53,6 +53,36 @@ int doblengine(void)
 					("<-Error->\n List does not exist\nPlease press 1 to create\n<--->\n");
 				}
 				break;
+			case 4:
+				if (head != NULL)
+				{
+					prompt(name, &age, gender);
+					dobl_list_pop(name, age, gender, &head);
+				}
+				else
+				{
+					printf
+					("<-Error->\n List does not exist\nPlease press 1 to create\n<--->\n");
+				}
+				break;
+			case 5:
+				if (head != NULL)
+				{
+					list_size = dobl_print_list(head);
+					printf("-> %lu elements\n\n", list_size);
+				}
+				else
+				{
+					printf
+					("<-Error->\n List does not exist\nPlease press 1 to create\n<--->\n");
+				}
+				break;
+			case 6:
+				{
+					dobl_free_list(head);
+					printf("Exit\nGoodbye\n");
+					return (0);
+				}
 		}
 	}
 }
