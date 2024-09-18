@@ -1,4 +1,5 @@
 #include "main.h"
+#include "dobl_main.h"
 #include <stdbool.h>
 /**
  * main - Entry point of program
@@ -32,7 +33,7 @@ int main(void)
 		}
 		else if (strcmp(choice,"2") == 0)
 		{
-			printf("Sorry, Doubly linked list is not yet released\n");
+			doblengine();
 		}
 		else if (strcmp(choice,"3") == 0)
 		{
