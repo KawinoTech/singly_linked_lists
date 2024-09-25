@@ -56,7 +56,7 @@ int engine(void)
 				break;
 			case 3:
 				printf("Enter Position: ");
-				scanf("%ld", &position);
+				scanf("%lu", &position);
 				if (head != NULL && position <= print_list(head))
 				{
 					prompt(name, &age, gender);
@@ -90,17 +90,19 @@ int engine(void)
 					printf("\nEmpty List, Press 1 to create\n");
 				}
 				break;
-			case 7:
-				{
-					free_list(head);
-					printf("Exit\nGoodbye\n");
-					return (0);
-				}
 			case 6:
 				{
 					del_begin(&head);
 				}
-				break;		
+				break;
+			case 7:
+				{
+					free_list(head);
+					printf("Exit\nGoodbye\n");
+					return(0);
+				}
+				break;	
 		}
 	}
+	return(0);
 }

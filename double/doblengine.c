@@ -13,7 +13,7 @@ int doblengine(void)
 	size_t list_size;
 	char name[20], gender[10];
 	int age, operation;
-	unsigned long int position;
+	/*unsigned long int position;*/
 	Teacher *head;
 	char *input_script = "Choose operation\n1. Create new list"
 	"\n2. Insert new node at the beginning"
@@ -81,8 +81,8 @@ int doblengine(void)
 				{
 					dobl_free_list(head);
 					printf("Exit\nGoodbye\n");
-					return (0);
 				}
 		}
 	}
+	return (0);
 }

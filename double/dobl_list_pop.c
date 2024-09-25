@@ -31,7 +31,7 @@ int dobl_list_pop(char *name, int age, char *gender, Teacher **head)
 	}
 	else
 	{
-		while(temp->next)
+		while (temp->next)
 		{
 			temp = temp->next;
 		}
