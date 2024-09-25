@@ -12,10 +12,10 @@ int main(void)
 {
 	bool iterate;
 	char choice[1];
-	
+
 	iterate = true;
 	printf("<---Welcome to DSA operations--->\n");
-	while(iterate)
+	while (iterate)
 	{
 		printf("PLease choose a Data Structure\n");
 		printf("1. Singly Linked Lists\n");
@@ -27,15 +27,15 @@ int main(void)
 			printf("Error\n");
 			continue;
 		}
-		if (strcmp(choice,"1") == 0)
+		if (strcmp(choice, "1") == 0)
 		{
 			engine();
 		}
-		else if (strcmp(choice,"2") == 0)
+		else if (strcmp(choice, "2") == 0)
 		{
 			doblengine();
 		}
-		else if (strcmp(choice,"3") == 0)
+		else if (strcmp(choice, "3") == 0)
 		{
 			printf("Exit\nGoodbye\n");
 			exit(EXIT_SUCCESS);

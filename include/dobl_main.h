@@ -1,5 +1,5 @@
-#ifndef DOBLMAIN_H
-#define DOBLMAIN_H
+#ifndef DOBL_MAIN_H
+#define DOBL_MAIN_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
