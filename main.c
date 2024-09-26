@@ -27,8 +27,6 @@ int main(void)
         printf("3. Stacks\n");
         printf("4. Queue\n");
         printf("5. Exit Program\n");
-        
-        // Read input
         if (getline(&choice, &len, stdin) == -1) {
             printf("Error reading input\n");
             continue;
@@ -39,8 +37,6 @@ int main(void)
         	printf("\nError\nPLease enter one character\n\n");
         	continue;
         }
-
-        // Remove newline character from input
         if (len > 0 && choice[len - 1] == '\n') {
             choice[len - 1] = '\0';
             len--;
@@ -64,8 +60,6 @@ int main(void)
             free(choice);
             exit(EXIT_SUCCESS);
         }
-
-        // Clear input for next iteration
         free(choice);
         choice = NULL;
         len = 0;
