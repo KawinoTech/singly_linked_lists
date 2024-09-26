@@ -17,5 +17,6 @@ void free_list(Student *head)
 		free(temp->name);
 		free(temp->gender);
 		free(temp);
+		printf("Hello");
 	}
 }

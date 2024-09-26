@@ -78,11 +78,13 @@ int doblengine(void)
 				}
 				break;
 			case 6:
+				if (head != NULL)
 				{
 					dobl_free_list(head);
-					printf("Exit\nGoodbye\n");
 				}
+				printf("Exit\nGoodbye\n");
+				return(0);
+				break;
 		}
 	}
-	return (0);
 }
