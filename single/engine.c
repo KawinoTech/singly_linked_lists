@@ -91,17 +91,16 @@ int engine(void)
 				}
 				break;
 			case 6:
-				{
-					del_begin(&head);
-				}
+				del_begin(&head);
 				break;
 			case 7:
+				if (head != NULL)
 				{
-					free_list(head);
-					printf("Exit\nGoodbye\n");
-					return(0);
+					free_list(head);	
 				}
-				break;	
+				printf("\nExit\nGoodbye\n\n");
+				iterate = false;
+				break;
 		}
 	}
 	return(0);

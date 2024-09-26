@@ -1,0 +1,43 @@
+#include "stack.h"
+#include <stdbool.h>
+#include <string.h>
+int stack_array_engine(void)
+{
+	bool iterate;
+	int top;
+	size_t len;
+	
+	char *no_of_elements = NULL;
+	char *choice = NULL;
+	len = 0;
+	iterate = true;
+
+	while (iterate)
+	{
+		printf("PLease choose the no. of elements\n");
+		printf("in the stack: ");
+		if (getline(&choice, &len, stdin) == -1);
+		{
+		    printf("\nError reading input\n");
+		    continue;
+		}
+		choice[len - 1] = '\0';
+		if (atoi(choice) == 00)
+		{
+			printf("Invalid Input\n");
+			continue;
+		}
+		break;
+	}
+	int array[atoi(choice)];
+	printf("%ld", sizeof(array));
+}
+	/*while (iterate)
+	{
+    printf("\n1. Push an element\n");
+    printf("2. Pop an element\n");
+    printf("3. Stacks\n");
+    printf("4. Queue\n");
+    printf("5. Exit Program\n");*/
+		
+	
