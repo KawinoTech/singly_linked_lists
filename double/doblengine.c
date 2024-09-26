@@ -82,9 +82,10 @@ int doblengine(void)
 				{
 					dobl_free_list(head);
 				}
+				iterate = false;
 				printf("Exit\nGoodbye\n");
-				return(0);
 				break;
 		}
 	}
+	return(0);
 }

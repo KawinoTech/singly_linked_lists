@@ -46,7 +46,6 @@ int stack_array_engine(void)
 		}
 		len = strlen(choice);
 
-		// Remove newline character from input
 		if (len > 0 && choice[len - 1] == '\n') {
 		    choice[len - 1] = '\0';
 		    len--;
@@ -103,8 +102,7 @@ int stack_array_engine(void)
 				break;
 			case 5:
 				iterate = false;
-				printf("Exit\n");
-				printf("Goodbye\n");
+				printf("Exit\nGoodbye\n\n");
 				break;
 				
 			default:
