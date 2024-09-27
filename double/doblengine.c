@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include "dobl_main.h"
+#include "main.h"
 /**
  * engine - deals with routing of operations
  *
@@ -28,6 +29,7 @@ int doblengine(void)
 	{
 		printf("%s", input_script);
 		scanf("%d", &operation);
+		clear_input_buffer();
 		switch (operation)
 		{
 			case 1:

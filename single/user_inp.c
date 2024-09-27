@@ -15,4 +15,5 @@ void prompt(char *name, int *age, char *gender)
 	scanf("%d", age);
 	printf("Enter your gender: ");
 	scanf("%s", gender);
+	clear_input_buffer();
 }

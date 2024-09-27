@@ -5,6 +5,7 @@
 int stack_array_engine(void)
 {
 	bool iterate;
+	int i;
 	int top;
 	int data;
 	size_t len;
@@ -90,7 +91,7 @@ int stack_array_engine(void)
 			case 4:
 				if (top != -1)
 				{
-					for (int i = 0; i <= top; i++)
+					for (i = 0; i <= top; i++)
 					{
 						printf("Data - %d\n", array[i]);
 					}
