@@ -1,6 +1,7 @@
 #include "main.h"
 #include "dobl_main.h"
 #include "stack.h"
+#include "link_stack.h"
 #include <stdbool.h>
 /**
  * main - Entry point of program
@@ -24,13 +25,15 @@ int main(void)
         printf("Please choose a Data Structure\n");
         printf("1. Singly Linked Lists\n");
         printf("2. Doubly Linked Lists\n");
-        printf("3. Stacks\n");
-        printf("4. Queue\n");
-        printf("5. Exit Program\n");
+        printf("3. Stacks(Array)\n");
+        printf("4. Stacks(Linked Lists)\n");
+        printf("5. Queue(Linked Lists)\n");
+        printf("6. Exit Program\n");
         if (getline(&choice, &len, stdin) == -1) {
             printf("Error reading input\n");
             continue;
         }
+        
         len = strlen(choice);
         if (len > 2)
         {
@@ -54,6 +57,10 @@ int main(void)
         {
             stack_array_engine();
         }
+        else if (strcmp(choice, "4") == 0)
+        {
+            link_stack_engine();
+        }
         else if (strcmp(choice, "5") == 0)
         {
             printf("Exit\nGoodbye\n");
@@ -62,6 +69,7 @@ int main(void)
         }
         free(choice);
         choice = NULL;
+        fflush(stdin);/*Clears the stdin, ensure no extra \n */
         len = 0;
     }
 

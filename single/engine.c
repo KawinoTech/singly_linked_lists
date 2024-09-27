@@ -6,7 +6,6 @@
  * Return: (0) Success
  * (1) if error
  */
-
 int engine(void)
 {
 	bool iterate;
@@ -29,6 +28,7 @@ int engine(void)
 	{
 		printf("%s", input_script);
 		scanf("%d", &operation);
+		clear_input_buffer();
 		switch (operation)
 		{
 			case 1:
@@ -98,7 +98,7 @@ int engine(void)
 				{
 					free_list(head);	
 				}
-				printf("\nExit\nGoodbye\n\n");
+				printf("\nExit\nGoodbye\n");
 				iterate = false;
 				break;
 		}
